@@ -1,0 +1,24 @@
+<ion-view view-title="Notes">
+	<ion-content padding="">
+		<ion-list show-delete="showDelete" show-reorder="showReorder" can-swipe="canSwipe">
+			<ion-item ng-repeat="item in items" ng-class="{hide: uiState.a}" ng-click="edit($index)">
+				<h2>{{item.title}}</h2>
+				<p>{{item.content}}</p>
+			</ion-item>
+			<ion-checkbox ng-model="item.marked" ng-repeat="item in items" ng-class="{hide: uiState.b}">
+				<h2>{{item.title}}</h2>
+				<p>{{item.content}}</p>
+			</ion-checkbox>
+		</ion-list>
+	</ion-content>
+	<div class="bar bar-footer bar-light" ng-class="{hide: uiState.a}">
+		<button class="button button-clear" ng-click="toggleUiState()"><i class="icon ion-trash-b"></i></button>
+		<div class="title"></div>
+		<button class="button button-clear" ng-click="modal.show()"><i class="icon ion-plus-round"></i></button>
+	</div>
+	<div class="bar bar-footer bar-light" ng-class="{hide: uiState.b}">
+		<button class="button button-clear"></button>
+		<div class="title"></div>
+		<button class="button button-clear" ng-click="confirm()"><i class="icon ion-checkmark-round"></i></button>
+	</div>
+</ion-view>

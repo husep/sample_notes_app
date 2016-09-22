@@ -1,0 +1,22 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-light">
+		<div class="buttons">
+			<button class="button button-clear"></button>
+		</div>
+		<h1 class="title">Add Entry</h1>
+		<div class="buttons">
+			<button class="button button-clear" ng-click="cancel()">Cancel</button>
+		</div>
+	</ion-header-bar>
+	<ion-content padding="true">
+		<div class="list list-inset">
+			<label class="item item-input">
+				<input type="text" placeholder="Title" ng-model="input.title">
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="Content" ng-model="input.content"></textarea>
+			</label>
+			<button class="button button-block button-positive" ng-click="insert()">Confirm</button>
+		</div>
+	</ion-content>
+</ion-modal-view>

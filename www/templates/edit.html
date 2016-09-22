@@ -1,0 +1,13 @@
+<ion-view view-title="{{data.title}}">
+	<ion-content padding="true">
+		<div class="list list-inset">
+			<label class="item item-input">
+				<input type="text" placeholder="Title" ng-model="data.title">
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="Content" ng-model="data.content"></textarea>
+			</label>
+			<button class="button button-block button-positive" ng-click="save()">Save</button>
+		</div>
+	</ion-content>
+</ion-view>
